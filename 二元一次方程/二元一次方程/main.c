@@ -7,14 +7,8 @@
 //
 
 #include <stdio.h>
-
-
-int main(int argc, const char * argv[]) {
-    double a,b,c,d,e,f;
-    printf("请按顺序输入二元一次方程组中的常数\n");
-    printf("ax+by+c=0\n");
-    printf("dx+ey+f=0\n");
-    scanf("%lf%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e,&f);
+void fun(double a,double b,double c,double d,double e,double f)
+{
     if ((a == 0 && b == 0 && c != 0)||(d == 0 && e == 0 && f != 0)) {
         printf("无解\n");
     }
@@ -32,7 +26,19 @@ int main(int argc, const char * argv[]) {
         else{
             printf("x = %f y = %f\n",(b * f - c * e)/(a * e - b * d),(a * f - c * d)/(b * d - a * e));
         }
-    }
+
+    
+}
+
+
+int main(int argc, const char * argv[]) {
+    double a,b,c,d,e,f;
+    printf("请按顺序输入二元一次方程组中的常数\n");
+    printf("ax+by+c=0\n");
+    printf("dx+ey+f=0\n");
+    scanf("%lf%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e,&f);
+        }
+    fun(a,b,c,d,e,f);
     return 0;
 
 
